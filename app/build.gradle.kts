@@ -105,10 +105,10 @@ configure<BaseExtension> {
         implementation(Libraries.Network.gson)
         implementation(Libraries.Network.loggingInterceptor)
 
-//        implementation(Libraries.GooglePlayService.ads)
+        implementation(Libraries.GooglePlayService.ads)
         implementation(Libraries.GooglePlayService.location)
 
-        //implementation(Libraries.Ads.appodeal)
+   //     implementation(Libraries.Ads.appodeal)
 
         implementation(Libraries.Support.appCompat)
         implementation(Libraries.Support.constraintLayout)

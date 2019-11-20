@@ -1,0 +1,6 @@
+CREATE TABLE "coins" (
+    [id] INTEGER PRIMARY KEY NOT NULL,
+    [amount] INTEGER NOT NULL
+)
+
+INSERT INTO "coins"(1, 750)

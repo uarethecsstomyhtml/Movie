@@ -82,7 +82,7 @@ object AndroidSdk {
 }
 
 object Release {
-    const val appId = "com.android.example.guessmoviebymusic"
+    const val appId = "com.arman.guessmoviebymusic"
     const val versionCode = 1
     const val versionName = "1.0.0"
 }
