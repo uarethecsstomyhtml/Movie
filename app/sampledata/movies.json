@@ -1,0 +1,41 @@
+{
+  "comment": "Name data - movies.json",
+  "data": [
+    {
+      "name": "Harry Potter",
+      "bgColor": "#7986CB"
+    },
+    {
+      "name": "Game of thrones",
+      "bgColor": "#7986CB"
+    },
+    {
+      "name": "Star wars",
+      "bgColor": "#7986CB"
+    },
+    {
+      "name": "Titanic",
+      "bgColor": "#7986CB"
+    },
+    {
+      "name": "Brigada",
+      "bgColor": "#7986CB"
+    },
+    {
+      "name": "Pirate of the caribbeans",
+      "bgColor": "#7986CB"
+    },
+    {
+      "name": "Furious",
+      "bgColor": "#7986CB"
+    },
+    {
+      "name": "Godfather",
+      "bgColor": "#7986CB"
+    },
+    {
+      "name": "Supernatural",
+      "bgColor": "#7986CB"
+    }
+  ]
+}

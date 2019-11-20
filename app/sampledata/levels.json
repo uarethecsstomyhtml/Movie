@@ -1,0 +1,25 @@
+{
+  "comment": "Names data - levels.json",
+  "data": [
+    {
+      "name": "Fan",
+      "bg": "@sample/levels"
+    },
+    {
+      "name": "Level 2",
+      "bg": "@sample/levels"
+    },
+    {
+      "name": "Level 3",
+      "bg": "@sample/levels"
+    },
+    {
+      "name": "Level 4",
+      "bg": "@sample/levels"
+    },
+    {
+      "name": "Level 5",
+      "bg": "@sample/levels"
+    }
+  ]
+}

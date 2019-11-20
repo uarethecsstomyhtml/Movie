@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_72dp"
+    tools:showIn="@layout/dialog_shop">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/shopIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/ic_shop_coins_15000"
+        tools:ignore="ContentDescription" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/shopName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:paddingEnd="@dimen/padding_8dp"
+        android:textColor="@color/black87"
+        android:textSize="@dimen/text_size_15sp"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintBottom_toTopOf="@+id/shopDescription"
+        app:layout_constraintEnd_toStartOf="@+id/shopPrice"
+        app:layout_constraintStart_toEndOf="@+id/shopIcon"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@sample/shop.json/data/name"
+        tools:ignore="RtlSymmetry" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/shopDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:paddingEnd="@dimen/padding_8dp"
+        android:textColor="@color/teal"
+        android:textSize="@dimen/text_size_13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/shopPrice"
+        app:layout_constraintStart_toEndOf="@+id/shopIcon"
+        app:layout_constraintTop_toBottomOf="@+id/shopName"
+        tools:text="@sample/shop.json/data/description"
+        tools:ignore="RtlSymmetry" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/shopPrice"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:textSize="@dimen/text_size_12sp"
+        android:textAllCaps="false"
+        android:textColor="@color/blueAccent"
+        android:letterSpacing="0.1"
+        android:insetTop="@dimen/inset_8dp"
+        android:insetBottom="@dimen/inset_8dp"
+        android:paddingStart="@dimen/padding_8dp"
+        android:paddingEnd="@dimen/padding_8dp"
+        app:cornerRadius="@dimen/corner_radius_5dp"
+        app:strokeColor="@color/blueAccent"
+        app:strokeWidth="@dimen/stroke_width_1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="@sample/shop.json/data/price"
+        tools:targetApi="lollipop" />
+
+    <View
+        android:id="@+id/viewLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_05dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:alpha="0.12"
+        android:background="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

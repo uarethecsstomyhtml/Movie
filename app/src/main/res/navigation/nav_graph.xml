@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/levelsFragment">
+
+    <fragment
+        android:id="@+id/levelsFragment"
+        android:name="com.android.example.guessmoviebymusic.levels.presentation.LevelsFragment"
+        android:label="LevelsFragment"
+        tools:layout="@layout/fragment_levels">
+        <action
+            android:id="@+id/action_levelsFragment_to_moviesFragment"
+            app:destination="@id/moviesFragment" >
+            <argument
+                android:name="levelId"
+                app:argType="long" />
+            <argument
+                android:name="levelName"
+                app:argType="string" />
+            <argument
+                android:name="levelBgColor"
+                app:argType="string" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/moviesFragment"
+        android:name="com.android.example.guessmoviebymusic.movies.presentation.MoviesFragment"
+        android:label="MoviesFragment"
+        tools:layout="@layout/fragment_movies">
+        <action
+            android:id="@+id/action_moviesFragment_to_movieDetailsFragment"
+            app:destination="@+id/movieDetailsFragment">
+            <argument
+                android:name="bgColor"
+                app:argType="string" />
+        </action>
+        <argument
+            android:name="levelId"
+            android:defaultValue="0L"
+            app:argType="long" />
+        <argument
+            android:name="levelName"
+            app:argType="string" />
+        <argument
+            android:name="levelBgColor"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetailsFragment"
+        android:name="com.android.example.guessmoviebymusic.movie_details.MovieDetailsFragment"
+        android:label="MovieDetailsFragment"
+        tools:layout="@layout/fragment_movie_details">
+        <argument
+            android:name="bgColor"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/victoryFragment"
+        android:name="com.android.example.guessmoviebymusic.victory.VictoryFragment"
+        android:label="VictoryFragment"
+        tools:layout="@layout/fragment_victory">
+        <action
+            android:id="@+id/action_victoryFragment_to_levelsFragment"
+            app:destination="@id/levelsFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/rateAppDialog"
+        android:name="com.android.example.guessmoviebymusic.victory.RateAppDialog"
+        android:label="RateAppDialog"
+        tools:layout="@layout/dialog_rate_app"/>
+    <dialog
+        android:id="@+id/hintsDialog"
+        android:name="com.android.example.guessmoviebymusic.HintsDialog"
+        android:label="HintsDialog"
+        tools:layout="@layout/dialog_hints"/>
+    <dialog
+        android:id="@+id/shopDialog"
+        android:name="com.android.example.guessmoviebymusic.ShopDialog"
+        android:label="ShopDialog"
+        tools:layout="@layout/dialog_shop"/>
+    <dialog
+        android:id="@+id/adsGdprDialog"
+        android:name="com.android.example.guessmoviebymusic.AdsGdprDialog"
+        android:label="AdsGdprDialog"
+        tools:layout="@layout/dialog_ads_gdpr">
+        <action
+            android:id="@+id/action_adsGdprDialog_to_adsGdprResultDialog"
+            app:destination="@id/adsGdprResultDialog">
+            <argument
+                android:name="descriptionRes"
+                app:argType="integer" />
+        </action>
+    </dialog>
+    <dialog
+        android:id="@+id/adsGdprResultDialog"
+        android:name="com.android.example.guessmoviebymusic.AdsGdprResultDialog"
+        android:label="AdsGdprResultDialog"
+        tools:layout="@layout/dialog_ads_gdpr_result">
+        <argument
+            android:name="descriptionRes"
+            app:argType="integer" />
+    </dialog>
+
+</navigation>

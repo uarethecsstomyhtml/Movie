@@ -1,0 +1,40 @@
+{
+  "comment": "Name data - hints.json",
+  "data": [
+    {
+      "name": "Free 100 coins",
+      "icon": "#7986CB",
+      "price": " "
+    },
+    {
+      "name": "Ask friends",
+      "icon": "#7986CB",
+      "price": " "
+    },
+    {
+      "name": "Effects",
+      "icon": "#7986CB",
+      "price": " "
+    },
+    {
+      "name": "Rate app",
+      "icon": "#7986CB",
+      "price": " "
+    },
+    {
+      "name": "Remove odd letters",
+      "icon": "#7986CB",
+      "price": "50"
+    },
+    {
+      "name": "Open a letter",
+      "icon": "#7986CB",
+      "price": "30"
+    },
+    {
+      "name": "Privacy policy",
+      "icon": "#7986CB",
+      "price": " "
+    }
+  ]
+}

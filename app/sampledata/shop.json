@@ -1,0 +1,47 @@
+{
+  "comment": "Name data - hints.json",
+  "data": [
+    {
+      "name": "350 coins",
+      "description": " ",
+      "price": "389,99 ₸",
+      "icon": "#7986CB"
+    },
+    {
+      "name": "750 coins",
+      "description": " ",
+      "price": "419,99 ₸",
+      "icon": "#7986CB"
+    },
+    {
+      "name": "2000 coins",
+      "description": " ",
+      "price": "1799,99 ₸",
+      "icon": "#7986CB"
+    },
+    {
+      "name": "4500 coins",
+      "description": " ",
+      "price": "1849,99 ₸",
+      "icon": "#7986CB"
+    },
+    {
+      "name": "15000 coins",
+      "description": "Best offer!",
+      "price": "3749,99 ₸",
+      "icon": "#7986CB"
+    },
+    {
+      "name": "Remove ads",
+      "description": " ",
+      "price": "699,99 ₸",
+      "icon": "#7986CB"
+    },
+    {
+      "name": "100 coins",
+      "description": "Watch this video",
+      "price": "Free!",
+      "icon": "#7986CB"
+    }
+  ]
+}
