@@ -3,7 +3,7 @@
     <string name="action_rate">Оценить</string>
     <string name="action_try_again">Повторить</string>
 
-    <string name="text_empty"/>
+    <string name="text_empty" />
 
     <string name="dialog_rate_app_title">Нравится «94% Фильмы»?</string>
     <string name="dialog_rate_app_description">Нажмите на звёзды, чтобы оценить\nигру в Play Market</string>
@@ -24,9 +24,9 @@
     <string name="label_share">Поделиться</string>
     <string name="label_shop">Магазин</string>
     <string name="label_vk_desc">Сравни свои результаты с друзьями!</string>
-    
-    <string name="description_free_100_coins">Посмотрите это видео</string>
+
     <string name="description_best_deal">Лучшее предложение!</string>
+    <string name="description_free_100_coins">Посмотрите это видео</string>
 
     <string name="learn_more">Learn more.</string>
     <string name="dialog_ads_gdpr_title">Personalize Your Ad Experience</string>

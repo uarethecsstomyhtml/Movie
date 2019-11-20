@@ -23,6 +23,9 @@
                 android:name="levelBgColor"
                 app:argType="string" />
         </action>
+        <action
+            android:id="@+id/action_levelsFragment_to_adsGdprDialog2"
+            app:destination="@id/adsGdprDialog" />
     </fragment>
     <fragment
         android:id="@+id/moviesFragment"
@@ -55,6 +58,15 @@
         <argument
             android:name="bgColor"
             app:argType="string" />
+        <action
+            android:id="@+id/action_movieDetailsFragment_to_shopDialog"
+            app:destination="@id/shopDialog" />
+        <action
+            android:id="@+id/action_movieDetailsFragment_to_hintsDialog"
+            app:destination="@id/hintsDialog" />
+        <action
+            android:id="@+id/action_movieDetailsFragment_to_victoryFragment"
+            app:destination="@id/victoryFragment" />
     </fragment>
     <fragment
         android:id="@+id/victoryFragment"
@@ -62,8 +74,8 @@
         android:label="VictoryFragment"
         tools:layout="@layout/fragment_victory">
         <action
-            android:id="@+id/action_victoryFragment_to_levelsFragment"
-            app:destination="@id/levelsFragment" />
+            android:id="@+id/action_victoryFragment_to_rateAppDialog"
+            app:destination="@id/rateAppDialog" />
     </fragment>
     <dialog
         android:id="@+id/rateAppDialog"
@@ -87,7 +99,9 @@
         tools:layout="@layout/dialog_ads_gdpr">
         <action
             android:id="@+id/action_adsGdprDialog_to_adsGdprResultDialog"
-            app:destination="@id/adsGdprResultDialog">
+            app:destination="@id/adsGdprResultDialog"
+            app:popUpTo="@+id/levelsFragment"
+            app:popUpToInclusive="true">
             <argument
                 android:name="descriptionRes"
                 app:argType="integer" />

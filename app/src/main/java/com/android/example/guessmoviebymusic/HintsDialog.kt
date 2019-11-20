@@ -1,14 +1,11 @@
 package com.android.example.guessmoviebymusic
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import android.view.ViewGroup.LayoutParams.MATCH_PARENT
-import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.Observer
 import com.android.example.guessmoviebymusic.HintType.*
 import com.android.example.guessmoviebymusic.`typealias`.HintUiList
+import com.android.example.guessmoviebymusic.base.presentation.BaseFullDialogFragment
 import com.android.example.guessmoviebymusic.extension.openPrivacyPolicy
 import com.android.example.guessmoviebymusic.extension.openRateApp
 //import com.appodeal.ads.Appodeal
@@ -16,31 +13,12 @@ import kotlinx.android.synthetic.main.dialog_hints.*
 import org.koin.android.ext.android.inject
 import timber.log.Timber
 
-class HintsDialog : DialogFragment() {
+class HintsDialog : BaseFullDialogFragment() {
 
     private lateinit var adapter: HintsAdapter
     private val viewModel: HintsViewModel by inject()
 
-    override fun onStart() {
-        Timber.d("onStart")
-        super.onStart()
-        dialog?.window?.apply {
-            setLayout(MATCH_PARENT, MATCH_PARENT)
-            setWindowAnimations(R.style.AppTheme_Slide)
-        }
-
-    }
-
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        Timber.d("onActivityCreated")
-        return inflater.inflate(R.layout.dialog_hints, container, false)
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        Timber.d("onCreate")
-        super.onCreate(savedInstanceState)
-        setStyle(STYLE_NORMAL, R.style.AppTheme_FullScreenDialog)
-    }
+    override fun getLayout() = R.layout.dialog_hints
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         Timber.d("onActivityCreated")

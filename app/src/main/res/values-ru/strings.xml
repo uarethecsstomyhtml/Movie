@@ -3,6 +3,26 @@
     <string name="tools_error_network_response">Failed to load data, check your internet connection</string>
     <string name="action_try_again">Повторить</string>
 
+    <string name="text_empty" />
+
+    <string name="dialog_rate_app_description">Нажмите на звёзды, чтобы оценить\nигру в Play Market</string>
+    <string name="fragment_victory_share_app_title">Посоревнуйся с друзьями</string>
+    <string name="label_block_ads">Убрать рекламу</string>
+    <string name="label_coins_350">350 Монет</string>
+    <string name="label_coins_750">750 Монет</string>
+    <string name="label_coins_2000">2000 Монет</string>
+    <string name="label_coins_4500">4500 Монет</string>
+    <string name="label_coins_15000">15000 Монет</string>
+    <string name="label_continue">Продолжить</string>
+    <string name="label_excellent">Отлично!</string>
+    <string name="label_100_coins">100 Монет</string>
+    <string name="label_hints">Подсказки</string>
+    <string name="label_share">Поделиться</string>
+    <string name="label_shop">Магазин</string>
+    <string name="label_vk_desc">Сравни свои результаты с друзьями!</string>
+
+    <string name="description_best_deal">Лучшее предложение!</string>
+    <string name="description_free_100_coins">Посмотрите это видео</string>
 
     <string name="dialog_ads_gdpr_title">Настройте свое использование рекламы</string>
     <string name="dialog_ads_gdpr_agree">Да, я согласен</string>

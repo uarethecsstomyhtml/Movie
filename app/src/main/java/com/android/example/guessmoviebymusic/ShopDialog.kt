@@ -10,34 +10,17 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.android.example.guessmoviebymusic.ShopType.*
 import com.android.example.guessmoviebymusic.`typealias`.ShopUiList
+import com.android.example.guessmoviebymusic.base.presentation.BaseFullDialogFragment
 import kotlinx.android.synthetic.main.dialog_shop.*
 import org.koin.android.ext.android.inject
 import timber.log.Timber
 
-class ShopDialog : DialogFragment() {
+class ShopDialog : BaseFullDialogFragment() {
 
     private lateinit var adapter: ShopAdapter
     private val viewModel: ShopViewModel by inject()
 
-    override fun onStart() {
-        Timber.d("onStart")
-        super.onStart()
-        dialog?.window?.apply {
-            setLayout(MATCH_PARENT, MATCH_PARENT)
-            setWindowAnimations(R.style.AppTheme_Slide)
-        }
-    }
-
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        Timber.d("onActivityCreated")
-        return inflater.inflate(R.layout.dialog_shop, container, false)
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        Timber.d("onCreate")
-        super.onCreate(savedInstanceState)
-        setStyle(STYLE_NORMAL, R.style.AppTheme_FullScreenDialog)
-    }
+    override fun getLayout() = R.layout.dialog_shop
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         Timber.d("onActivityCreated")

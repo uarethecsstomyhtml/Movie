@@ -15,6 +15,7 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.android.example.guessmoviebymusic.R.string.dialog_ads_gdpr_agree_text
 import com.android.example.guessmoviebymusic.R.string.dialog_ads_gdpr_disagree_text
+import com.android.example.guessmoviebymusic.base.presentation.BaseFullDialogFragment
 import com.android.example.guessmoviebymusic.base.presentation.MainActivity
 import com.android.example.guessmoviebymusic.extension.getApplicationName
 import com.android.example.guessmoviebymusic.AdsGdprDialogDirections.Companion.actionAdsGdprDialogToAdsGdprResultDialog as openAdsResultDialog
@@ -23,35 +24,16 @@ import kotlinx.android.synthetic.main.dialog_ads_gdpr.*
 import org.koin.android.ext.android.inject
 import timber.log.Timber
 
-class AdsGdprDialog : DialogFragment() {
+class AdsGdprDialog : BaseFullDialogFragment() {
 
     private val viewModel: AdsGdprViewModel by inject()
 
-    override fun onStart() {
-        Timber.d("onStart")
-        super.onStart()
-        dialog?.window?.apply {
-            setLayout(MATCH_PARENT, MATCH_PARENT)
-            setWindowAnimations(R.style.AppTheme_Slide)
-        }
-
-    }
-
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        Timber.d("onActivityCreated")
-        return inflater.inflate(R.layout.dialog_ads_gdpr, container, false)
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        Timber.d("onCreate")
-        super.onCreate(savedInstanceState)
-        setStyle(STYLE_NORMAL, R.style.AppTheme_FullScreenDialog)
-    }
+    override fun getLayout() = R.layout.dialog_ads_gdpr
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         Timber.d("onActivityCreated")
         super.onActivityCreated(savedInstanceState)
-        isCancelable = false
+        //isCancelable = false
         prepareGDPR()
         observeDescriptionResState()
         btnYes.setSafeOnClickListener(::onClickYes)
