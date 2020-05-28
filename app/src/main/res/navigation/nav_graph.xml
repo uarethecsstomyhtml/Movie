@@ -3,79 +3,46 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/levelsFragment">
+    app:startDestination="@id/moviesNav">
+
+    <include app:graph="@navigation/movies_nav" />
 
     <fragment
-        android:id="@+id/levelsFragment"
-        android:name="com.arman.guessmoviebymusic.levels.presentation.LevelsFragment"
-        android:label="LevelsFragment"
-        tools:layout="@layout/fragment_levels">
-        <action
-            android:id="@+id/action_levelsFragment_to_moviesFragment"
-            app:destination="@id/moviesFragment" >
-            <argument
-                android:name="levelUi"
-                app:argType="com.arman.guessmoviebymusic.levels.presentation.LevelUi" />
-        </action>
-    </fragment>
-    <fragment
-        android:id="@+id/moviesFragment"
-        android:name="com.arman.guessmoviebymusic.movies.presentation.MoviesFragment"
-        android:label="MoviesFragment"
-        tools:layout="@layout/fragment_movies">
-        <action
-            android:id="@+id/action_moviesFragment_to_movieDetailsFragment"
-            app:destination="@+id/movieDetailsFragment">
-            <argument
-                android:name="bgColor"
-                app:argType="string" />
-        </action>
-        <argument
-            android:name="levelUi"
-            app:argType="com.arman.guessmoviebymusic.levels.presentation.LevelUi" />
-    </fragment>
-    <fragment
-        android:id="@+id/movieDetailsFragment"
-        android:name="com.arman.guessmoviebymusic.movie_details.MovieDetailsFragment"
-        android:label="MovieDetailsFragment"
-        tools:layout="@layout/fragment_movie_details">
-        <argument
-            android:name="bgColor"
-            app:argType="string" />
-        <action
-            android:id="@+id/action_movieDetailsFragment_to_shopDialog"
-            app:destination="@id/shopDialog" />
-        <action
-            android:id="@+id/action_movieDetailsFragment_to_hintsDialog"
-            app:destination="@id/hintsDialog" />
-        <action
-            android:id="@+id/action_movieDetailsFragment_to_victoryFragment"
-            app:destination="@id/victoryFragment" />
-    </fragment>
-    <fragment
         android:id="@+id/victoryFragment"
-        android:name="com.arman.guessmoviebymusic.victory.VictoryFragment"
+        android:name="com.example.android.movies.presentation.ui.victory.VictoryFragment"
         android:label="VictoryFragment"
         tools:layout="@layout/fragment_victory">
         <action
             android:id="@+id/action_victoryFragment_to_rateAppDialog"
             app:destination="@id/rateAppDialog" />
+        <deepLink
+            android:id="@+id/deepLinkVictory"
+            app:uri="https://www.ramaway.victory.kz" />
     </fragment>
     <dialog
         android:id="@+id/rateAppDialog"
-        android:name="com.arman.guessmoviebymusic.victory.RateAppDialog"
-        android:label="RateAppDialog"
-        tools:layout="@layout/dialog_rate_app"/>
+        android:name="com.example.android.movies.presentation.ui.rate_app.RateAppDialog"
+        android:label="RateAppDialog">
+        <deepLink
+            android:id="@+id/deepLinkRateApp"
+            app:uri="https://ramaway.rateapp.kz" />
+    </dialog>
     <dialog
         android:id="@+id/hintsDialog"
-        android:name="com.arman.guessmoviebymusic.hints.HintsDialog"
-        android:label="HintsDialog"
-        tools:layout="@layout/dialog_hints"/>
+        android:name="com.example.android.hints.presentation.ui.HintsDialog"
+        android:label="HintsDialog">
+        <deepLink
+            android:id="@+id/deepLinkHints"
+            app:uri="https://www.ramaway.hints.com" />
+    </dialog>
     <dialog
         android:id="@+id/shopDialog"
-        android:name="com.arman.guessmoviebymusic.shop.ShopDialog"
-        android:label="ShopDialog"
-        tools:layout="@layout/dialog_shop"/>
+        android:name="com.example.android.shop.presentation.ui.ShopDialog"
+        android:label="ShopDialog">
+        <deepLink
+            android:id="@+id/deepLinkShop"
+            app:uri="https://www.ramaway.shop.kz" />
+    </dialog>
 
 
 </navigation>

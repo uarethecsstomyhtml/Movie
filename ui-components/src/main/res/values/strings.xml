@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tools_error_network_response">Failed to load data, check your internet connection</string>
+
+    <string name="action_continue">Продолжить</string>
+    <string name="action_later">Позже</string>
+    <string name="action_rate">Оценить</string>
+    <string name="action_share">Поделиться</string>
+    <string name="action_try_again">Try again</string>
+
+    <string name="text_empty" />
+</resources>

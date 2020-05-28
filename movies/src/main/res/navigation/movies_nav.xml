@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/moviesNav"
+    app:startDestination="@id/levelsFragment"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/levelsFragment"
+        android:name="com.example.android.movies.presentation.ui.levels.LevelsFragment"
+        android:label="LevelsFragment"
+        tools:layout="@layout/fragment_levels">
+        <action
+            android:id="@+id/action_levels_to_movies"
+            app:destination="@id/moviesFragment">
+            <argument
+                android:name="levelUi"
+                app:argType="com.example.android.movies.presentation.ui.levels.LevelUi" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/moviesFragment"
+        android:name="com.example.android.movies.presentation.ui.MoviesFragment"
+        android:label="MoviesFragment"
+        tools:layout="@layout/fragment_movies">
+        <action
+            android:id="@+id/action_moviesFragment_to_movieDetailsFragment"
+            app:destination="@+id/movieDetailsFragment">
+            <argument
+                android:name="bgColor"
+                app:argType="string" />
+        </action>
+        <argument
+            android:name="levelUi"
+            app:argType="com.example.android.movies.presentation.ui.levels.LevelUi" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetailsFragment"
+        android:name="com.example.android.movies.presentation.ui.movie_details.MovieDetailsFragment"
+        android:label="MovieDetailsFragment"
+        tools:layout="@layout/fragment_movie_details">
+        <argument
+            android:name="bgColor"
+            app:argType="string" />
+    </fragment>
+
+
+</navigation>

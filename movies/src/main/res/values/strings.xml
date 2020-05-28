@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="subtitle_victory">Вы нашли правильный ответ!</string>
+
+    <string name="title_excellent">Отлично!</string>
+    <string name="title_share_app">Посоревнуйся с друзьями</string>
+
+    <string name="rate_app_title">Нравится «Угадай фильм по музыке»?</string>
+    <string name="rate_app_desc">Нажмите на звёзды, чтобы оценить\nигру в Play Market</string>
+
+    <string name="help_additional_title">Доп.\nпомощь</string>
+    <string name="help_ask_friends_title">Спросить\nу друзей</string>
+    <string name="help_free_100coins_title">Бесплатно\n100 монет</string>
+    <string name="help_shop_title">Магазин</string>
+
+</resources>

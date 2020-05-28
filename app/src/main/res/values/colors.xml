@@ -17,6 +17,8 @@
     <color name="amberLight">#FFD54F</color>
     <color name="amberDark">#FFA000</color>
 
+    <color name="yellowLight">#FFF176</color>
+
     <color name="teal">#009688</color>
     <color name="tealDark">#00796B</color>
     <color name="tealLight">#4DB6AC</color>

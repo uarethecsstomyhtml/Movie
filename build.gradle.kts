@@ -1,5 +1,4 @@
 
-
 buildscript {
     repositories {
         google()
@@ -19,9 +18,6 @@ allprojects {
     repositories {
         google()
         jcenter()
-        maven {
-            setUrl("https://artifactory.appodeal.com/appodeal")
-        }
     }
 }
 

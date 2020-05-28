@@ -10,6 +10,15 @@ object BuildPlugins {
     const val kotlinAndroidExtensions = "kotlin-android-extensions"
     const val kotlinKapt = "kotlin-kapt"
     const val navSafeArgs = "androidx.navigation.safeargs.kotlin"
+    const val project = "com.arman.guessmoviebymusic"
+}
+
+object ConfigurationName {
+    const val kapt = "kapt"
+    const val implementation = "implementation"
+    const val debugImplementation = "debugImplementation"
+    const val testImplementation = "testImplementation"
+    const val androidTestImplementation = "androidTestImplementation"
 }
 
 object Tasks {
@@ -76,7 +85,7 @@ object ProductFlavors {
 
 object AndroidSdk {
     const val compile = 29
-    const val min = 19
+    const val min = 21
     const val target = 29
     const val testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 }
@@ -88,7 +97,7 @@ object Release {
 }
 
 object Versions {
-    const val gradle = "3.5.1"
+    const val gradle = "3.5.2"
     const val androidBuildToolsVersion = "29.0.2"
 
     const val kotlin = "1.3.50"
@@ -96,7 +105,6 @@ object Versions {
     const val multidex = "2.0.1"
     const val ktlint = "0.34.2"
     const val ktlintPlugin = "9.1.0"
-
 
     object Jetpack {
         const val nav = "2.1.0"
@@ -122,10 +130,10 @@ object Versions {
     }
 
     object Network {
-        const val retrofit = "2.6.2"
-        const val okHttp = "3.12.1"
+        const val retrofit = "2.7.0"
+        const val okHttp = "4.2.2"
         const val gson = "2.3.0"
-        const val loggingInterceptor = "4.0.0"
+        const val loggingInterceptor = "4.2.1"
     }
 
     object GooglePlayService {
@@ -133,14 +141,16 @@ object Versions {
         const val location = "17.0.0"
     }
 
-    object Ads {
-        const val appodeal = "2.5.10"
-    }
-
     object Test {
         const val junit = "4.12"
-        const val espresso = "3.2.0"
+        const val espresso = "3.1.0"
         const val koin = "2.0.1"
+        const val mockito = "3.2.4"
+        const val dexMakerVersion = "2.25.1"
+        const val archTesting = "2.0.0"
+        const val androidXTestExtKotlinRunner = "1.1.0"
+        const val androidXTestCore = "1.2.0"
+        const val fragment = "1.2.0"
     }
 }
 
@@ -151,8 +161,16 @@ object Libraries {
 
     const val multidex = "androidx.multidex:multidex:${Versions.multidex}"
 
+    const val fragment = "androidx.fragment:fragment:${Versions.Test.fragment}"
+    const val fragmentTest = "androidx.fragment:fragment-testing:${Versions.Test.fragment}"
+
+    const val livedataKtx = "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0"
+    const val robolectric = "org.robolectric:robolectric:4.3.1"
+
+
     object Jetpack {
         const val navFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.Jetpack.nav}"
+        const val archCore = "androidx.arch.core:core-common:${Versions.Jetpack.nav}"
         const val navUi = "androidx.navigation:navigation-ui-ktx:${Versions.Jetpack.nav}"
         const val room = "androidx.room:room-runtime:${Versions.Jetpack.room}"
         const val roomKapt = "androidx.room:room-compiler:${Versions.Jetpack.room}"
@@ -186,10 +204,6 @@ object Libraries {
         const val location = "com.google.android.gms:play-services-location:${Versions.GooglePlayService.location}"
     }
 
-    object Ads {
-        const val appodeal = "com.appodeal.ads:nodex:${Versions.Ads.appodeal}"
-    }
-
     object Support {
         const val appCompat = "androidx.appcompat:appcompat:${Versions.Support.appCompat}"
         const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.Support.constraintLayout}"
@@ -201,6 +215,19 @@ object Libraries {
         const val junit = "junit:junit:${Versions.Test.junit}"
         const val espresso = "androidx.test.espresso:espresso-core:${Versions.Test.espresso}"
         const val koin = "org.koin:koin-test:${Versions.Test.koin}"
+        const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.3.3"
+        //  const val archCore = "androidx.arch.core:core-testing:${Versions.Test.archTesting}"
+    }
+
+    object AndroidTest {
+        const val mockito = "org.mockito:mockito-core:${Versions.Test.mockito}"
+        const val dexMakerMockito =
+            "com.linkedin.dexmaker:dexmaker-mockito:${Versions.Test.dexMakerVersion}"
+        const val espressoContrib =
+            "androidx.test.espresso:espresso-contrib:${Versions.Test.espresso}"
+        const val jUnitKtx =
+            "androidx.test.ext:junit-ktx:${Versions.Test.androidXTestExtKotlinRunner}"
+        const val androidXCoreKtx = "androidx.test:core-ktx:${Versions.Test.androidXTestCore}"
     }
 }
 

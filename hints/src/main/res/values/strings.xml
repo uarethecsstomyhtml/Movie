@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_ask_friends">Спросить у друзей</string>
+    <string name="title_contact_us">Свяжитесь с нами</string>
+    <string name="title_effects">Эффекты</string>
+    <string name="title_free_100coins">Бесплатно 100 монет</string>
+    <string name="title_open_letter">Открыть букву</string>
+    <string name="title_privacy_policy">Политика конфиденциальности</string>
+    <string name="title_rate_app">Оценить приложение</string>
+    <string name="title_remove_odd_letters">Убрать лишние буквы</string>
+    <string name="title_restore_purchases">Восстановить покупки</string>
+</resources>

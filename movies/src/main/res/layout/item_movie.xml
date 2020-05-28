@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/movieRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/margin_4dp"
+    android:layout_marginStart="@dimen/margin_4dp"
+    android:layout_marginTop="@dimen/margin_8dp"
+    tools:backgroundTint="@sample/movies.json/data/bgColor"
+    tools:showIn="@layout/fragment_movies">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/movieImg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintDimensionRatio="H,3:1"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/ic_star_inactive" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/movieName"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="bottom|center_horizontal"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:singleLine="true"
+            android:paddingStart="@dimen/padding_4dp"
+            android:paddingEnd="@dimen/padding_4dp"
+            android:paddingBottom="@dimen/padding_8dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="@sample/movies.json/data/name" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

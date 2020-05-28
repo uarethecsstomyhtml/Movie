@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="subtitle_best_deal">Лучшее предложение!</string>
+    <string name="subtitle_free_100_coins">Посмотрите это видео</string>
+
+    <string name="price_block_ads">699,99 ₸</string>
+    <string name="price_coins350">389,99 ₸</string>
+    <string name="price_coins750">419,99 ₸</string>
+    <string name="price_coins2000">1 799,99 ₸</string>
+    <string name="price_coins4500">1849, 99 ₸</string>
+    <string name="price_coins15000">3 749,99 ₸</string>
+    <string name="price_free_100coins">Бесплатно!</string>
+
+
+    <string name="title_block_ads">Убрать рекламу</string>
+    <string name="title_coins350">350 Монет</string>
+    <string name="title_coins750">750 Монет</string>
+    <string name="title_coins2000">2000 Монет</string>
+    <string name="title_coins4500">4500 Монет</string>
+    <string name="title_coins15000">15000 Монет</string>
+    <string name="title_free_100coins">100 Монет</string>
+
+
+</resources>
